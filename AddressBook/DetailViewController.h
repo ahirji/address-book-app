@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate>
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+-(void)getImageWithCompletionCallback:(void (^)(BOOL success))callback ;
+
+@property (nonatomic, weak) IBOutlet UILabel *lblContactName;
+@property (nonatomic, weak) IBOutlet UIImageView *imgContactImage;
+@property (nonatomic, weak) IBOutlet UITableView *tblContactDetails;
+@property (nonatomic, strong) NSDictionary *user;
+@property (retain, nonatomic) NSURLConnection *currentConnection;
+@property (retain, nonatomic) NSMutableData *responseData;
 
 @end
 

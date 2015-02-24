@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface AddressBookTests : XCTestCase
+#import "AppDelegate.h"
+#import "AddressBookController.h"
+#import "DetailViewController.h"
 
+@interface AddressBookTests : XCTestCase {
+
+@private
+    UIApplication *app;
+    AppDelegate *appDelegate;
+    AddressBookController *addressBookController;
+    DetailViewController *detailViewController;
+}
 @end
 
 @implementation AddressBookTests
@@ -25,15 +35,31 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testGetContacts {
+    [addressBookController getContactsWithCompletionCallback:^(BOOL success){
+        XCTAssert(success);
+    }];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)testAddressBookListsAllUsers {
+    NSInteger expectedRows = 100;
+    [addressBookController getContactsWithCompletionCallback:^(BOOL success) {
+        XCTAssertTrue([addressBookController tableView:addressBookController.tableView numberOfRowsInSection:expectedRows]);
+    }];
+}
+
+-(void)testAddressBookTableViewReturnsCellClass {
+    [addressBookController getContactsWithCompletionCallback:^(BOOL success){
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        UITableViewCell *cell = [addressBookController tableView:addressBookController.tableView cellForRowAtIndexPath:indexPath];
+        XCTAssertTrue(cell);
+    }];
+}
+
+- (void)testGetUserImage {
+    [addressBookController getContactsWithCompletionCallback:^(BOOL success){}];
+    [detailViewController getImageWithCompletionCallback:^(BOOL success){
+        XCTAssert(success);
     }];
 }
 

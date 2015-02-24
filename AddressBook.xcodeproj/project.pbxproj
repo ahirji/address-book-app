@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F8A3C2FB1A9AB4E900E05284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3C2FA1A9AB4E900E05284 /* main.m */; };
 		F8A3C2FE1A9AB4E900E05284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3C2FD1A9AB4E900E05284 /* AppDelegate.m */; };
-		F8A3C3011A9AB4E900E05284 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3C3001A9AB4E900E05284 /* MasterViewController.m */; };
+		F8A3C3011A9AB4E900E05284 /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3C3001A9AB4E900E05284 /* AddressBookController.m */; };
 		F8A3C3041A9AB4E900E05284 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A3C3031A9AB4E900E05284 /* DetailViewController.m */; };
 		F8A3C3071A9AB4EA00E05284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A3C3051A9AB4EA00E05284 /* Main.storyboard */; };
 		F8A3C3091A9AB4EA00E05284 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A3C3081A9AB4EA00E05284 /* Images.xcassets */; };
@@ -33,8 +33,8 @@
 		F8A3C2FA1A9AB4E900E05284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8A3C2FC1A9AB4E900E05284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8A3C2FD1A9AB4E900E05284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8A3C2FF1A9AB4E900E05284 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		F8A3C3001A9AB4E900E05284 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		F8A3C2FF1A9AB4E900E05284 /* AddressBookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookController.h; sourceTree = "<group>"; };
+		F8A3C3001A9AB4E900E05284 /* AddressBookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookController.m; sourceTree = "<group>"; };
 		F8A3C3021A9AB4E900E05284 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		F8A3C3031A9AB4E900E05284 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F8A3C3061A9AB4EA00E05284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 			children = (
 				F8A3C2FC1A9AB4E900E05284 /* AppDelegate.h */,
 				F8A3C2FD1A9AB4E900E05284 /* AppDelegate.m */,
-				F8A3C2FF1A9AB4E900E05284 /* MasterViewController.h */,
-				F8A3C3001A9AB4E900E05284 /* MasterViewController.m */,
+				F8A3C2FF1A9AB4E900E05284 /* AddressBookController.h */,
+				F8A3C3001A9AB4E900E05284 /* AddressBookController.m */,
 				F8A3C3021A9AB4E900E05284 /* DetailViewController.h */,
 				F8A3C3031A9AB4E900E05284 /* DetailViewController.m */,
 				F8A3C3051A9AB4EA00E05284 /* Main.storyboard */,
@@ -225,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A3C2FE1A9AB4E900E05284 /* AppDelegate.m in Sources */,
-				F8A3C3011A9AB4E900E05284 /* MasterViewController.m in Sources */,
+				F8A3C3011A9AB4E900E05284 /* AddressBookController.m in Sources */,
 				F8A3C2FB1A9AB4E900E05284 /* main.m in Sources */,
 				F8A3C3041A9AB4E900E05284 /* DetailViewController.m in Sources */,
 			);
@@ -418,6 +418,7 @@
 				F8A3C31D1A9AB4EA00E05284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A3C31E1A9AB4EA00E05284 /* Build configuration list for PBXNativeTarget "AddressBookTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				F8A3C3201A9AB4EA00E05284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
